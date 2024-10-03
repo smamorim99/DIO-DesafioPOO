@@ -1,40 +1,48 @@
 public class Funcionalidades implements AparelhoTelefonico, NavegadorInternet, ReprodutorMusical{
-    public static void main(String[] args) throws Exception {
-        
-        
-    }
 
     @Override
+    public String selecionarMusica(String musica){
+        if (musica == null || musica.isEmpty()) {
+            musica = "Tocando agora";
+        }
+        return "tocando musica" + musica;
+    }
     public void tocarMusica() {
-        System.out.println("Tocando: Turn So Cold by Drowning Pool");
+        System.out.println("tocando musica");
     }
     public void pausarMusica() {
-        System.out.println("Pausando musica");
-    }
-    public void selecionarMusica(){
-        String proxMusica = "Reproduzir Proxima Musica";
+            System.out.println("PAUSANDO Musica");
     }
 
 
     @Override
+    public String exibirPagina(String url) {
+        if (url == null || url.isEmpty()) {
+            url = "https://www.mermaidchart.com/raw/2814ba39-f61f-46f1-963d-59a4649ba8b3?theme=light&version=v0.1&format=svg";
+        }
+        return "Acessando: " + url;
+    }
+    
     public void adicionarNovaAba() {
-        System.out.println("Abrindo nova aba no navegador");
+       System.out.println("abrindo nova guia");
     }
-
-    @Override
     public void atualizarPagina() {
-        System.out.println("Atualizando Pagina");
+        System.out.println("Atualizando pagina...");
     }
 
+
     @Override
+    public String ligar(String numero) {
+        if (numero == null || numero.isEmpty()) {
+            numero = "111111";
+        }
+        return "Chamando: " + numero;
+    }
+    
     public void atender() {
-        System.out.println("Atendendo celular");
+        System.out.println("Atendendo ligação");
     }
-
-    @Override
     public void ouvirCorreioDeVoz() {
-        System.out.println("Ouvindo Correio de Voz");
+       System.out.println("Reproduzindo Correio de Voz...");
     }
-
-
 }

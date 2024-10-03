@@ -1,12 +1,6 @@
 public interface AparelhoTelefonico {
-
-    public static void ligar () {
-        String discarNumero = "4444-4444";
-    }
+    public String ligar (String numero);
     public void atender();
 
     public void ouvirCorreioDeVoz();
-
-
-    
-} 
+}
