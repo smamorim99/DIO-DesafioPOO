@@ -18,7 +18,7 @@ public class Funcionalidades implements AparelhoTelefonico, NavegadorInternet, R
     @Override
     public String exibirPagina(String url) {
         if (url == null || url.isEmpty()) {
-            url = "https://www.mermaidchart.com/raw/2814ba39-f61f-46f1-963d-59a4649ba8b3?theme=light&version=v0.1&format=svg";
+            url = "url";
         }
         return "Acessando: " + url;
     }
